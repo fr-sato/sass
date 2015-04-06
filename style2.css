@@ -1,0 +1,71 @@
+﻿body {
+  background-color: #eee;
+}
+
+.container {
+  display:  inline-block;
+  *display: inline;
+  width:    250px;
+  padding:  5px;
+}
+*.container {
+  zoom: 1;
+}
+.container .inner {
+  background-color:   #fff;
+  -moz-box-shadow:    0px 0px 1px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+  -o-box-shadow:      0px 0px 1px rgba(0,0,0,0.25);
+  -ms-box-shadow:     0px 0px 1px rgba(0,0,0,0.25);
+}
+
+.container .inner a {
+  display: block;
+}
+.container .inner *a {
+  zoom: 1;
+}
+.container .inner a:after {
+  content:    "";
+  display:    block;
+  clear:      both;
+  height:     0;
+  visibility: hidden;
+  overflow:   hidden;
+}
+.container .inner a:hover {
+  -moz-box-shadow:    0px 5px 15px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
+  -o-box-shadow:      0px 5px 15px rgba(0,0,0,0.25);
+  -ms-box-shadow:     0px 5px 15px rgba(0,0,0,0.25);
+}
+.container:nth-child(even) .inner a {
+  position: relative;
+}
+
+.container .inner a .pic {
+  width:  250px;
+  height: 350px;
+}
+.container:nth-child(even) .inner a .pic {
+  padding-top: 200px;
+}
+
+.container .inner a .text {
+  padding: 20px;
+}
+.container:nth-child(even) .inner a .text {
+  position: absolute;
+  top:      0;
+}
+
+.container .inner a .text .title {
+  color:       #000;
+  font-size:   20px;
+  font-weight: bold;
+}
+
+.container .inner a .text .desc {
+  padding-top: 10px;
+  color:       #333;
+}
